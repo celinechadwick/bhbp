@@ -35,7 +35,7 @@ body {
   margin: 0;
 }
 ul {
-  padding 0;
+  padding: 5px;
 }
 p, span {
   font-weight: 500;
@@ -122,6 +122,12 @@ button:hover {
   margin: 0;
 }
 
+.section-1 p {
+  max-width: 750px;
+}
+ul {
+  width: 750px;
+}
 .section-2-5 {
   padding: 0 50px 50px;
 }
@@ -186,6 +192,15 @@ button:hover {
   display: flex;
 }
 
+@media screen and (max-width: 1200px) {
+  .section-1 p {
+    max-width: 650px;
+  }
+  ul {
+    width: 650px;
+  }
+}
+
 @media screen and (max-width: 1000px) {
   .half-width.purple {
     padding: 40px;
@@ -193,12 +208,18 @@ button:hover {
   h1 {
     font-size: 50px;
   }
- li {
+ li, p {
     font-size: 16px;
   }
 
   .third-width {
     width: 40%;
+  }
+  .section-1 p {
+    max-width: 500px;
+  }
+  ul {
+    width: 500px;
   }
 }
 
@@ -232,7 +253,19 @@ button:hover {
   .section-3 .half-width.dark-purple {
     padding: 40px 30px;
   }
+  .section-1 p {
+    max-width: 400px;
+  }
+  ul {
+    width: 400px;
+  }
 }
+@media screen and (max-width: 750px) {
+  .section-1, .section-2-5 {
+      padding: 0 30px;
+  }
+}
+
 
 @media screen and (max-width: 700px) {
   p, span {
@@ -274,8 +307,11 @@ button:hover {
   .section-1 {
     flex-direction: column;
   }
-  .section-1 p {
+  .section-1 p, ul {
     width: auto;
+  }
+  .section-1 p {
+    max-width: 100%;
   }
   .third-width {
     padding: 30px 5px;
